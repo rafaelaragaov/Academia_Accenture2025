@@ -50,4 +50,4 @@ npx cypress run
 
 ## Autor
 
-<p aling = "center"> Feito por  Rafael Aragão ❤️ </p>
+<p aling="center"> Feito por  Rafael Aragão ❤️ </p>
