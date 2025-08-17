@@ -1,5 +1,9 @@
 import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps'
 
+Given('o usuário acessa o portal "webtables"', () => {
+    cy.visit('/')  
+})         
+
 When('clica no botão Add', () => {
     cy.acessaAdd()
 })

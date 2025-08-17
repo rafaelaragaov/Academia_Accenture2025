@@ -6,13 +6,21 @@ const INP_AGE = '#age'
 const INP_SALARY = '#salary'
 const INP_DEPARTMENT = '#department'
 const BTN_SUBMIT = '#submit'
+const RED_COLOR = 'rgb(220, 53, 69)'
+const BORDER_COLOR = 'border-color'
+const INVALID_RED = '.form-control.is-invalid, .was-validated .form-control:invalid'
 
 Cypress.Commands.add('emailInvalido', () => {
     cy.get(INP_FIRSTNAME).type(Cypress.env('randomUser').firstName, { log: false })
+    cy.wait(150)
     cy.get(INP_LASTNAME).type(Cypress.env('randomUser').lastName, { log: false })
-    cy.get(INP_EMAIL).type('!')
+    cy.wait(150)
+    cy.get(INP_EMAIL).type('emailinvalido@test')
+    cy.wait(150)
     cy.get(INP_AGE).type(Cypress.env('randomUser').age)
+    cy.wait(150)
     cy.get(INP_SALARY).type(Cypress.env('randomUser').salary, { log: false })
+    cy.wait(150)
     cy.get(INP_DEPARTMENT).type(Cypress.env('randomUser').department)
 })
 
@@ -27,18 +35,28 @@ Cypress.Commands.add('dadosVazios', () => {
 
 Cypress.Commands.add('idadeInvalida', () => {
     cy.get(INP_FIRSTNAME).type(Cypress.env('randomUser').firstName, { log: false })
+    cy.wait(150)
     cy.get(INP_LASTNAME).type(Cypress.env('randomUser').lastName, { log: false })
+    cy.wait(150)
     cy.get(INP_EMAIL).type(Cypress.env('randomUser').email, { log: false })
+    cy.wait(150)
     cy.get(INP_AGE).type(-10)
+    cy.wait(150)
     cy.get(INP_SALARY).type(Cypress.env('randomUser').salary, { log: false })
+    cy.wait(150)
     cy.get(INP_DEPARTMENT).type(Cypress.env('randomUser').department)
 })
 
-Cypress.Commands.add('salaryInvalido', () => {
+Cypress.Commands.add('salarioInvalido', () => {
     cy.get(INP_FIRSTNAME).type(Cypress.env('randomUser').firstName, { log: false })
+    cy.wait(150)
     cy.get(INP_LASTNAME).type(Cypress.env('randomUser').lastName, { log: false })
+    cy.wait(150)
     cy.get(INP_EMAIL).type(Cypress.env('randomUser').email, { log: false })
+    cy.wait(150)
     cy.get(INP_AGE).type(Cypress.env('randomUser').age)
+    cy.wait(150)
     cy.get(INP_SALARY).type(-1000)
+    cy.wait(150)
     cy.get(INP_DEPARTMENT).type(Cypress.env('randomUser').department)
 })

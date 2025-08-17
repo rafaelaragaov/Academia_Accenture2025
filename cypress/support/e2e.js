@@ -18,7 +18,7 @@ import './commands'
 import './pages/Cadastro/cadastroSucesso.page'
 import './pages/Cadastro/cadastro.cmds.page'
 import './pages/Cadastro/cadastroErro.page'
-import './pages/Edit/edit.page'
+import './pages/Editar/edit.page'
 import './pages/Excluir/excluir.page'
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false;

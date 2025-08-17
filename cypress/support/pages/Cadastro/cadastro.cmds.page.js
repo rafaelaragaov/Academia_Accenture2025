@@ -11,10 +11,10 @@ Cypress.Commands.add('randomData', () => {
     const randomEmail = faker.internet.email(randomName, randomLastName)
     Cypress.env('randomUser').email = randomEmail
 
-    const randomAge = faker.string.numeric(2) // até 2 digitos
+    const randomAge = faker.number.int({ min: 18, max: 65 })
     Cypress.env('randomUser').age = randomAge
 
-    const randomSalary = faker.string.numeric(5) // até 5 digitos
+    const randomSalary = faker.string.numeric(5) 
     Cypress.env('randomUser').salary = randomSalary
 
     const randomDepartment = faker.person.jobType()

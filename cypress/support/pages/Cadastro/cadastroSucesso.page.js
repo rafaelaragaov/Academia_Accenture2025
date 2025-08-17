@@ -25,18 +25,23 @@ Cypress.Commands.add('acessaAdd', () => {
 })
 
 Cypress.Commands.add('clicaSubmit', () => {
-    cy.wait(2000)
+    cy.wait(1500)
     cy.get(BTN_SUBMIT).click()
+    cy.wait(1000)
 })
 
 Cypress.Commands.add('preencherDados', () => {
     cy.get(INP_FIRSTNAME).type(Cypress.env('randomUser').firstName, { log: false })
+    cy.wait(150)
     cy.get(INP_LASTNAME).type(Cypress.env('randomUser').lastName, { log: false })
+    cy.wait(150)
     cy.get(INP_EMAIL).type(Cypress.env('randomUser').email, { log: false })
+    cy.wait(150)
     cy.get(INP_AGE).type(Cypress.env('randomUser').age)
+    cy.wait(150)
     cy.get(INP_SALARY).type(Cypress.env('randomUser').salary, { log: false })
+    cy.wait(150)
     cy.get(INP_DEPARTMENT).type(Cypress.env('randomUser').department)
-
 })
 
 
