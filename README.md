@@ -49,5 +49,7 @@ npx cypress run
 ```
 
 ## Autor
+<p align="center">
+  Feito por  Rafael Aragão ❤️ 
+</p>
 
-                                Feito por  Rafael Aragão ❤️ 
